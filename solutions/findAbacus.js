@@ -11,6 +11,9 @@ Tip
 The wrong object may contain the key abacus but with false value! There may only be one object which contains the key as true.
 */
 
+
+
+
 function findAbacus(array) {
 
 }

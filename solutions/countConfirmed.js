@@ -14,8 +14,24 @@ Count the users where the isConfirmed key's value is true and return the amount 
 If you receive an array which contains only one user object where the isConfirmed key's value is true then return 1.
 */
 
-function countConfirmed(users) {
 
+
+let confirmCount = 0
+const countConfirmedUsers = []
+
+function countConfirmed(users) {
+  for (const key in users) {
+    if (users[key].isConfirmed == true) {
+      countConfirmedUsers.push("confirmed")
+      confirmCount += 1}
+
+      if (users[key].isConfirmed == false) {
+        countConfirmedUsers.push("nonConfirmed")
+      }
+  }
+  console.log(confirmCount)
+      console.log(countConfirmedUsers)
 }
+countConfirmed(users)
 
 module.exports = countConfirmed;
