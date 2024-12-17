@@ -15,15 +15,18 @@ You do not have to deal with the case, when there are only underage users in the
 
 */
 
+const adultsAverageAge = {}
+
 const averageAgeNumbers = []
 
   
   function getNumbers(){
-  for (const key in averageAgeData) {
-    averageAgeNumbers.push(averageAgeData[key].age)
+  for (const key in adultsAverageAge) {
+    if(adultsAverageAge[key].age >= 18)
+    averageAgeNumbers.push(adultsAverageAge[key].age)
     }
   }
-  getNumbers(averageAgeData)
+  getNumbers(adultsAverageAge)
 console.log(averageAgeNumbers)
 
 
