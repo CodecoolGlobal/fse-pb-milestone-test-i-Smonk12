@@ -16,10 +16,11 @@ If you receive an array which contains only one user object where the isConfirme
 
 
 
-let confirmCount = 0
-const countConfirmedUsers = []
+
 
 function countConfirmed(users) {
+  let confirmCount = 0
+const countConfirmedUsers = []
   for (const key in users) {
     if (users[key].isConfirmed == true) {
       countConfirmedUsers.push("confirmed")
@@ -31,7 +32,7 @@ function countConfirmed(users) {
   }
   console.log(confirmCount)
       console.log(countConfirmedUsers)
+      return confirmCount
 }
-countConfirmed(users)
 
 module.exports = countConfirmed;

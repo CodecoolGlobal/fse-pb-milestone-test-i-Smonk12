@@ -1,6 +1,6 @@
 /*
 Work only in the solution/*.js file, don't touch the other files.
-Fill the function adultsAverageAge(), which gets an array of users as parameter.
+Fill the function users(), which gets an array of users as parameter.
 
 A user object in the received array will look like this:
 
@@ -15,31 +15,24 @@ You do not have to deal with the case, when there are only underage users in the
 
 */
 
-const adultsAverageAge = {}
 
+function averageAgeOfAdults(users) {
 const averageAgeNumbers = []
-
-  
-  function getNumbers(){
-  for (const key in adultsAverageAge) {
-    if(adultsAverageAge[key].age >= 18)
-    averageAgeNumbers.push(adultsAverageAge[key].age)
-    }
+  for (const key in users) {
+    if (users[key].age >= 18)
+      averageAgeNumbers.push(users[key].age)
   }
-  getNumbers(adultsAverageAge)
-console.log(averageAgeNumbers)
-
 
 let sum = 0
 let average = 0
+console.log(averageAgeNumbers)
 
-  function averageAgeOfAdults() {
-for (let index = 0; index < averageAgeNumbers.length; index++){
-  sum += averageAgeNumbers[index];}
+  for (let index = 0; index < averageAgeNumbers.length; index++) {
+    sum += averageAgeNumbers[index];
+  }
   average = sum / averageAgeNumbers.length;
   return average
-  }
-  averageAgeOfAdults(averageAgeNumbers)
+}
 
 
 
